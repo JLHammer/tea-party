@@ -1,16 +1,19 @@
 import { create } from "../utils/create.js";
 import { get } from "../utils/get.js";
 
-import "./nav.js";
+import { nav } from "./nav.js";
 
 export function header() {
   const header = create("header");
-  const headerImg = create("img");
+  const heroDiv = create("div", "flex flex-col items-center relative");
+  const headerImg = create("img", "w-full");
   headerImg.src = "./assets/images/Image-Hero-Front.jpg";
-  const heading = create("h1");
+  const heading = create("h1", "absolute text-7xl");
   heading.textContent = "Tea Party";
-  header.appendChild(heading);
+  heroDiv.appendChild(headerImg);
+  heroDiv.appendChild(heading);
+  header.appendChild(heroDiv);
+  header.appendChild(nav());
 
-  header.appendChild(headerImg);
   return header;
 }

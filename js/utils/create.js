@@ -1,3 +1,5 @@
-export function create(el) {
-  return document.createElement(el)
+export function create(el, classes) {
+  const element = document.createElement(el);
+  if (classes) element.className = classes;
+  return element;
 }
