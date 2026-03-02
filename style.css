@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Bluestar";
+  src: url("./assets/fonts/Bluestar-Regular.ttf") format("truetype");
+}
+
+@theme {
+  --color-primary: #c7cc65;
+  --color-secondary: #513a28;
+  --color-tertiary: #c9b99b;
+  --color-accent: #c79574;
+  --color-bg: #f1f4e3;
+  --color-text: #696b60;
+  --color-form-field: #cbab96;
+
+  --font-bluestar: "Bluestar", sans-serif;
+}
