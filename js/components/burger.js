@@ -9,7 +9,7 @@ export function burger(ul) {
   );
 
   for (let i = 0; i < 3; i++) {
-    const bar = create("span", "block w-6 h-0.5 bg-bg");
+    const bar = create("span", "block w-6 h-0.5 bg-bg bg-primary rounded-full");
     set(bar, btn);
   }
 
