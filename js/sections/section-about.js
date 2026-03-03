@@ -1,9 +1,8 @@
 import { create } from "../utils/create.js";
-import { get } from "../utils/get.js";
 import { set } from "../utils/set.js";
 
 export function sectionAbout() {
-  const section = create("section", "bg-bg px-2 py-6");
+  const section = create("section", "bg-bg");
   // Div 1 in section
   const div1 = create("div", "w-full");
   const h2 = create("h2", "text-3xl text-primary mb-4");
@@ -16,7 +15,7 @@ export function sectionAbout() {
     "Since 1990 our knowledge and experience has been geared to the quality of our products, which we treat with respect and meticulousness.";
 
   // Div 2 in section
-  const div2 = create("div", "w-full");
+  const div2 = create("div", "w-full flex flex-col items-center");
   const img = create("img");
   img.src = "./favicon.jpg";
 

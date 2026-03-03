@@ -29,4 +29,8 @@
     font-family: var(--font-bluestar);
     @apply font-semibold;
   }
+
+  section {
+    @apply w-full py-6;
+  }
 }

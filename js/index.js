@@ -1,6 +1,5 @@
 import { set } from "./utils/set.js";
 import { get } from "./utils/get.js";
-import { create } from "./utils/create.js";
 
 import { header } from "./components/header.js";
 import { main } from "./main.js";
