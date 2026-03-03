@@ -7,9 +7,9 @@ import { burger } from "./burger.js";
 export function nav() {
   const nav = create(
     "nav",
-    "flex justify-between gap-4 items-center bg-secondary w-full px-3 py-1 min-h-12 text-center",
+    "flex justify-between gap-4 items-center bg-secondary w-full h-full px-3 py-1 min-h-12 text-center",
   );
-  const ul = create("ul", "hidden justify-between w-full text-2xl");
+  const ul = create("ul", "hidden justify-between w-full h-full text-2xl");
   const navList = [
     { href: "about", innerText: "About Us" },
     { href: "brands", innerText: "Brands" },
@@ -19,7 +19,7 @@ export function nav() {
 
   navList.forEach(({ href, innerText }) => {
     const li = create("li");
-    const navEl = create("a", "text-xl text-primary p-1");
+    const navEl = create("a", "flex text-lg text-primary p-1");
     navEl.href = `#${href}`;
     navEl.innerText = innerText;
     set(navEl, li);
