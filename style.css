@@ -13,6 +13,8 @@
   --color-bg: #f1f4e3;
   --color-bg-green: #c8c7a8;
   --color-text: #696b60;
+  --color-text2: #5d3a24;
+  --color-brown: #844f2d;
   --color-form-field: #cbab96;
 
   --font-bluestar: "Bluestar", sans-serif;
@@ -23,10 +25,32 @@
   h1,
   h2 {
     font-family: var(--font-bluestar);
-    @apply font-semibold;
+    @apply font-medium;
   }
 
   section {
-    @apply w-full py-6;
+    @apply w-full pt-6;
+
+    img {
+      @apply w-full h-auto;
+    }
+  }
+
+  form {
+    @apply w-full;
+
+    input,
+    button[type="submit"] {
+      @apply w-full col-span-2 p-2 border-2 bg-form-field border-brown text-accent;
+      background-color: var(--color-form-field);
+    }
+
+    input[type="checkbox"] {
+      @apply w-fit aspect-square;
+    }
+
+    label {
+      @apply w-fit text-accent;
+    }
   }
 }
