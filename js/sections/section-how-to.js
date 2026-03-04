@@ -4,7 +4,7 @@ import { set } from "../utils/set.js";
 export function sectionHowTo() {
   const section = create("section", "bg-bg");
 
-  const h2 = create("h2", "text-3xl text-accent mb-4");
+  const h2 = create("h2", "text-3xl text-accent ml-4 mb-4");
   h2.textContent = "How to prepare tea";
 
   const grid = create(
@@ -24,10 +24,11 @@ export function sectionHowTo() {
   h4_1.textContent = "Choose your brand and learn how to prepare.";
 
   // For div2
-  const dropdown = create("select", "w-full text-accent");
+  const dropdown = create("select", "w-full text-accent bg-form-field");
   dropdown.id = "tea-dropdown";
   dropdown.name = "tea-dropdown";
   const options = [
+    "Choose Brand",
     "Green Tea",
     "Black Tea",
     "White Tea",

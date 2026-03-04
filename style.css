@@ -28,6 +28,10 @@
     @apply font-medium;
   }
 
+  a {
+    @apply origin-left hover:scale-105 transition-transform duration-200;
+  }
+
   section {
     @apply w-full pt-6;
 

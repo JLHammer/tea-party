@@ -2,10 +2,10 @@ import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
 export function sectionHero() {
-  const section = create("section", "bg-bg");
+  const section = create("section", "bg-bg p-4");
   // Div 1 in section
   const div1 = create("div", "w-full");
-  const h2 = create("h2", "text-3xl text-primary mb-4");
+  const h2 = create("h2", "text-center text-3xl text-primary mb-4");
   h2.textContent = "Passion and pride";
   const p1 = create("p", "mb-6");
   const p2 = create("p");

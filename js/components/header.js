@@ -8,7 +8,7 @@ export function header() {
   const heroDiv = create("div", "flex flex-col items-center relative");
   const headerImg = create("img", "w-full");
   headerImg.src = "./assets/images/Image-Hero-Front.jpg";
-  const heading = create("h1", "absolute text-7xl");
+  const heading = create("h1", "absolute top-[5%] text-7xl select-none");
   heading.textContent = "Tea Party";
   set([headerImg, heading], heroDiv);
   set([heroDiv], header);

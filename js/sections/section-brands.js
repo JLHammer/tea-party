@@ -4,7 +4,7 @@ import { set } from "../utils/set.js";
 export function sectionBrands() {
   const section = create("section", "bg-bg");
 
-  const h2 = create("h2", "text-3xl text-primary mb-4");
+  const h2 = create("h2", "text-3xl text-primary ml-4 mb-4");
   h2.textContent = "Our Brands";
 
   const grid = create("div", "grid grid-cols-2 md:grid-cols-3 gap-2");

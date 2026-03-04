@@ -6,9 +6,9 @@ import { burger } from "./burger.js";
 export function nav() {
   const nav = create(
     "nav",
-    "flex justify-between gap-4 items-center bg-secondary w-full h-full px-3 py-1 min-h-12 text-center",
+    "flex flex-col items-center bg-secondary w-full h-fit px-3 py-1 text-center md:gap-4 ",
   );
-  const ul = create("ul", "hidden justify-between w-full h-full text-2xl");
+  const ul = create("ul", "hidden flex-col items-center w-full h-fit text-2xl");
   const navList = [
     { href: "about", innerText: "About Us" },
     { href: "brands", innerText: "Brands" },
@@ -25,7 +25,8 @@ export function nav() {
     set(li, ul);
   });
 
-  set(ul, nav);
   set(burger(ul), nav);
+  set(ul, nav);
+
   return nav;
 }
