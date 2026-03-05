@@ -4,21 +4,21 @@ import { set } from "../utils/set.js";
 import { form } from "../components/form.js";
 
 export function footer() {
-  const section = create("footer", "bg-secondary text-bg p-4");
+  const section = create("footer", "bg-secondary p-4 text-bg");
 
-  const h2 = create("h2", "text-3xl text-primary mb-4");
+  const h2 = create("h2", "mb-4 text-primary");
   h2.textContent = "Contact Us";
 
   const flex = create("div", "flex flex-col gap-8");
   const address = create(
     "address",
-    "not-italic flex flex-col items-start gap-4",
+    "flex flex-col items-start gap-4 not-italic",
   );
   const div1 = create("div", "flex flex-col");
   const div2 = create("div", "flex flex-col");
   const div3 = create("div", "flex flex-col");
 
-  const h5_1 = create("h5", "text-xl");
+  const h5_1 = create("h5");
   const phone = create("p");
   const mail = create("p");
 
@@ -30,7 +30,7 @@ export function footer() {
   phone.textContent = "+46 (0) 761688994";
   mail.textContent = "sales@terministeriet.com";
 
-  const h5_2 = create("h5", "text-xl");
+  const h5_2 = create("h5");
   const about = create("a");
   const blog = create("a");
 
@@ -40,7 +40,7 @@ export function footer() {
   blog.textContent = "Our Blog";
   blog.href = "#";
 
-  const h5_3 = create("h5", "text-xl");
+  const h5_3 = create("h5");
   const policy = create("a");
   const contact = create("a");
 

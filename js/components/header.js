@@ -5,10 +5,10 @@ import { nav } from "./nav.js";
 
 export function header() {
   const header = create("header");
-  const heroDiv = create("div", "flex flex-col items-center relative");
+  const heroDiv = create("div", "relative flex flex-col items-center");
   const headerImg = create("img", "w-full");
   headerImg.src = "./assets/images/Image-Hero-Front.jpg";
-  const heading = create("h1", "absolute top-[5%] text-7xl select-none");
+  const heading = create("h1", "absolute top-[5%] select-none");
   heading.textContent = "Tea Party";
   set([headerImg, heading], heroDiv);
   set([heroDiv], header);

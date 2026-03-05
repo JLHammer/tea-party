@@ -1,3 +1,3 @@
 export function get(target) {
-  return document.querySelector(target)
+  return document.querySelector(target);
 }

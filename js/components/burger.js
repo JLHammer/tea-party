@@ -4,11 +4,11 @@ import { set } from "../utils/set.js";
 export function burger(ul) {
   const btn = create(
     "button",
-    "flex flex-col gap-1 cursor-pointer ml-auto p-1",
+    "ml-auto flex cursor-pointer flex-col gap-1 p-1 md:hidden",
   );
 
   for (let i = 0; i < 3; i++) {
-    const bar = create("span", "block w-7 h-1 bg-bg bg-primary");
+    const bar = create("span", "block h-1 w-7 bg-bg bg-primary");
     set(bar, btn);
   }
 

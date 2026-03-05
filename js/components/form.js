@@ -24,7 +24,7 @@ export function form() {
 
   const checkBoxes = create(
     "div",
-    "w-fit grid grid-cols-4 col-span-full gap-2 justify-items-start",
+    "col-span-full grid w-fit grid-cols-4 justify-items-start gap-2",
   );
 
   const mailMeLabel = create("label", "col-span-1");

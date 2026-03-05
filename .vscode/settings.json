@@ -1,4 +1,16 @@
 {
-  "tailwindCSS.experimental.classRegex": ["(?:className|classList)\\s*?=\\s*?[\"'`]([^\"'`]*).*?"]
+  "tailwindCSS.experimental.classRegex": ["(?:className|classList)\\s*?=\\s*?[\"'`]([^\"'`]*).*?"],
+  "tailwindCSS.includeLanguages": {
+  "javascript": "html"
+},
+"tailwindCSS.experimental.classRegex": [
+  "[\"'`]([^\"'`]*).*?[\"'`]"
+],
+"editor.quickSuggestions": {
+  "other": "on",
+  "comments": "off",
+  "strings": "on"
+}
 }
  
+

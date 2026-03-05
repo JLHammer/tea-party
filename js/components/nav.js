@@ -6,9 +6,12 @@ import { burger } from "./burger.js";
 export function nav() {
   const nav = create(
     "nav",
-    "flex flex-col items-center bg-secondary w-full h-fit px-3 py-1 text-center md:gap-4 ",
+    "flex h-fit w-full flex-col items-center bg-secondary px-3 py-1 text-center md:gap-4",
   );
-  const ul = create("ul", "hidden flex-col items-center w-full h-fit text-2xl");
+  const ul = create(
+    "ul",
+    "hidden h-fit w-full flex-col items-center text-2xl md:flex md:flex-row md:justify-end md:gap-4",
+  );
   const navList = [
     { href: "about", innerText: "About Us" },
     { href: "brands", innerText: "Brands" },
@@ -18,7 +21,7 @@ export function nav() {
 
   navList.forEach(({ href, innerText }) => {
     const li = create("li");
-    const navEl = create("a", "flex text-lg text-primary p-1");
+    const navEl = create("a", "flex p-1 text-lg text-primary");
     navEl.href = `#${href}`;
     navEl.innerText = innerText;
     set(navEl, li);

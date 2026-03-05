@@ -4,7 +4,7 @@ import { set } from "../utils/set.js";
 export function sectionAbout() {
   const section = create("section", "bg-bg");
 
-  const h2 = create("h2", "text-3xl text-brown ml-4 mb-4");
+  const h2 = create("h2", "mb-4 ml-4 text-brown");
   h2.textContent = "About Us";
 
   const grid = create("div", "grid gap-2 md:grid-cols-2");
@@ -23,17 +23,24 @@ export function sectionAbout() {
   ];
 
   for (let i = 0; i < imgSrcs.length; i++) {
-    const div = create("div", "relative");
+    const div = create(
+      "div",
+      "group relative cursor-pointer transition-transform duration-300 hover:z-10 hover:scale-105",
+    );
     const img = create("img");
     img.src = imgSrcs[i];
     set(img, div);
-    const h3 = create(
-      "h3",
-      "absolute top-1/20 left-1/20 text-primary text-3xl",
+
+    const overlay = create(
+      "div",
+      "absolute inset-0 bg-[color-mix(in_srgb,var(--color-brown)_50%,transparent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100",
     );
+    set(overlay, div);
+
+    const h3 = create("h3", "absolute top-1/20 left-1/20 z-10 text-primary");
     h3.textContent = h3s[i];
     set(h3, div);
-    const h4 = create("h4", "absolute top-1/4 left-1/20 text-bg text-xl");
+    const h4 = create("h4", "absolute top-2/9 left-1/20 z-10 text-bg");
     h4.textContent = h4s[i];
     set(h4, div);
     set(div, grid);

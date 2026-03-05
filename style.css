@@ -1,9 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Indie+Flower&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&family=Syne:wght@400..800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
-
-@font-face {
-  font-family: "Bluestar";
-  src: url("./assets/fonts/Bluestar-Regular.ttf") format("truetype");
-}
 
 @theme {
   --color-primary: #c7cc65;
@@ -17,27 +13,51 @@
   --color-brown: #844f2d;
   --color-form-field: #cbab96;
 
-  --font-bluestar: "Bluestar", sans-serif;
-  --font-default: Georgia, sans-serif;
+  --font-lobster2: "Lobster Two", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
 @layer base {
   h1,
   h2 {
-    font-family: var(--font-bluestar);
+    font-family: var(--font-lobster2);
     @apply font-medium;
   }
 
+  h1 {
+    @apply text-7xl;
+  }
+
+  h2 {
+    @apply text-5xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-base;
+  }
+
   a {
-    @apply origin-left hover:scale-105 transition-transform duration-200;
+    @apply origin-left transition-transform duration-200 hover:scale-105;
   }
 
   section {
-    @apply w-full pt-6;
+    @apply flex w-full flex-col pt-8;
 
     img {
-      @apply w-full h-auto;
+      @apply h-auto w-full;
     }
+  }
+
+  select {
+    @apply border border-brown px-1 py-2 text-xl focus:outline-none;
   }
 
   form {
@@ -45,16 +65,20 @@
 
     input,
     button[type="submit"] {
-      @apply w-full col-span-2 p-2 border-2 bg-form-field border-brown text-accent;
+      @apply col-span-2 w-full border-2 border-brown bg-form-field px-2 py-1 text-xl font-medium text-accent;
       background-color: var(--color-form-field);
     }
 
     input[type="checkbox"] {
-      @apply w-fit aspect-square;
+      @apply aspect-square w-fit;
     }
 
     label {
       @apply w-fit text-accent;
     }
+  }
+
+  footer a {
+    @apply text-sm;
   }
 }

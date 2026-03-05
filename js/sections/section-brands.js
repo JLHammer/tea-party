@@ -4,10 +4,10 @@ import { set } from "../utils/set.js";
 export function sectionBrands() {
   const section = create("section", "bg-bg");
 
-  const h2 = create("h2", "text-3xl text-primary ml-4 mb-4");
+  const h2 = create("h2", "mb-4 ml-4 text-primary");
   h2.textContent = "Our Brands";
 
-  const grid = create("div", "grid grid-cols-2 md:grid-cols-3 gap-2");
+  const grid = create("div", "grid grid-cols-2 gap-2 md:grid-cols-3");
   const imgSrcs = [
     "./assets/images/Brands-Green.jpg",
     "./assets/images/Brands-Black.jpg",
@@ -18,7 +18,10 @@ export function sectionBrands() {
   ];
 
   imgSrcs.forEach((src) => {
-    const img = create("img", "w-full h-full object-cover");
+    const img = create(
+      "img",
+      "h-full w-full cursor-pointer object-cover transition-transform duration-300 hover:scale-105",
+    );
     img.src = src;
     set(img, grid);
   });
