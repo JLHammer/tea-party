@@ -4,7 +4,7 @@ import { set } from "../utils/set.js";
 export function burger(ul) {
   const btn = create(
     "button",
-    "ml-auto flex cursor-pointer flex-col gap-1 p-1 md:hidden",
+    "md: absolute top-0 right-0 ml-auto flex h-full cursor-pointer flex-col items-center justify-center gap-1 p-1 md:hidden",
   );
 
   for (let i = 0; i < 3; i++) {
@@ -15,6 +15,8 @@ export function burger(ul) {
   btn.addEventListener("click", () => {
     ul.classList.toggle("hidden");
     ul.classList.toggle("flex");
+    btn.classList.toggle("h-9");
+    btn.classList.toggle("h-full");
   });
 
   return btn;

@@ -20,7 +20,7 @@ export function sectionBrands() {
   imgSrcs.forEach((src) => {
     const img = create(
       "img",
-      "h-full w-full cursor-pointer object-cover transition-transform duration-300 hover:scale-105",
+      "h-full w-full cursor-pointer object-cover transition-all duration-300 hover:scale-[1.025] hover:rounded-md",
     );
     img.src = src;
     set(img, grid);

@@ -25,11 +25,11 @@
   }
 
   h1 {
-    @apply text-7xl;
+    @apply origin-[50%_25%] text-7xl transition duration-300 text-shadow-lg text-shadow-secondary hover:scale-110;
   }
 
   h2 {
-    @apply text-5xl;
+    @apply w-fit origin-left cursor-default text-5xl transition duration-300 hover:scale-105;
   }
 
   h3 {
@@ -40,12 +40,12 @@
     @apply text-xl;
   }
 
-  h5 {
-    @apply text-base;
+  footer h5 {
+    @apply origin-left cursor-default text-lg transition-transform duration-200 hover:scale-[1.03];
   }
 
   a {
-    @apply origin-left transition-transform duration-200 hover:scale-105;
+    @apply origin-left transition-transform duration-150 hover:scale-105;
   }
 
   section {
@@ -65,12 +65,30 @@
 
     input,
     button[type="submit"] {
-      @apply col-span-2 w-full border-2 border-brown bg-form-field px-2 py-1 text-xl font-medium text-accent;
+      @apply col-span-2 w-full border-2 border-brown bg-form-field px-2 py-1 text-xl font-medium text-accent transition-all duration-300;
       background-color: var(--color-form-field);
     }
 
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      @apply focus:ring-1 focus:ring-brown focus:outline-none;
+    }
+
+    input:is([type="text"], [type="email"], [type="tel"]):is(
+        :hover,
+        :focus,
+        :not(:placeholder-shown)
+      ) {
+      @apply text-brown;
+    }
+
+    button[type="submit"] {
+      @apply cursor-pointer hover:scale-[1.025] hover:border-accent hover:bg-brown hover:text-accent focus:bg-brown focus:text-bg;
+    }
+
     input[type="checkbox"] {
-      @apply aspect-square w-fit;
+      @apply aspect-square w-fit cursor-pointer;
     }
 
     label {

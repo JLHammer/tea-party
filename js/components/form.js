@@ -2,7 +2,10 @@ import { create } from "../utils/create";
 import { set } from "../utils/set";
 
 export function form() {
-  const form = create("form", "grid grid-cols-2 justify-items-start gap-2");
+  const form = create(
+    "form",
+    "grid flex-1 grid-cols-2 justify-items-start gap-2",
+  );
 
   const name = create("input");
   name.type = "text";

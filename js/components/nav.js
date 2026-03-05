@@ -6,11 +6,11 @@ import { burger } from "./burger.js";
 export function nav() {
   const nav = create(
     "nav",
-    "flex h-fit w-full flex-col items-center bg-secondary px-3 py-1 text-center md:gap-4",
+    "relative flex h-fit min-h-9 w-full flex-col items-center bg-secondary px-3 py-1 text-center md:gap-4",
   );
   const ul = create(
     "ul",
-    "hidden h-fit w-full flex-col items-center text-2xl md:flex md:flex-row md:justify-end md:gap-4",
+    "hidden h-fit w-full flex-col items-center text-2xl md:mr-[11%] md:flex md:flex-row md:justify-end md:gap-6",
   );
   const navList = [
     { href: "about", innerText: "About Us" },

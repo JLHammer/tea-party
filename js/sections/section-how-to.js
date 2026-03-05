@@ -2,32 +2,38 @@ import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
 export function sectionHowTo() {
-  const section = create("section", "bg-bg");
+  const section = create("section", "bg-bg md:pb-3");
 
   const h2_1 = create("h2", "mb-4 ml-4 text-accent");
   h2_1.textContent = "How to prepare tea";
 
   const grid = create(
     "div",
-    "grid grid-cols-1 items-center bg-[url('assets/images/About-us-1.jpg')] md:grid-cols-2 md:gap-2",
+    "grid grid-cols-1 items-center bg-[url('assets/images/About-us-1.jpg')] bg-contain md:grid-cols-2",
   );
 
   const div1 = create("div", "flex flex-col items-start p-3");
-  const div2 = create("div", "flex flex-col items-center px-1 pb-3");
-  const div3 = create("div", "flex flex-col items-start bg-accent");
+  const div2 = create(
+    "div",
+    "flex h-full flex-col items-center px-2 pb-6 md:mx-6 md:p-0",
+  );
+  const div3 = create("div", "flex flex-col items-start bg-accent md:p-2");
   const div4 = create(
     "div",
     "flex h-full flex-col items-start gap-2 bg-accent p-2 pb-6",
   );
 
   // For div1
-  const h4 = create("h4", "text-accent");
-  h4.textContent = "Make a nice cup of tea";
+  const h3 = create("h3", "text-accent");
+  h3.textContent = "Make a nice cup of tea";
   const h5 = create("h5", "text-accent");
   h5.textContent = "Choose your brand and learn how to prepare.";
 
   // For div2
-  const dropdown = create("select", "w-full bg-form-field text-accent");
+  const dropdown = create(
+    "select",
+    "w-full bg-form-field text-accent transition duration-300 ease-in-out hover:shadow-md hover:shadow-brown md:mt-5",
+  );
   dropdown.id = "tea-dropdown";
   dropdown.name = "tea-dropdown";
   const options = [
@@ -46,7 +52,10 @@ export function sectionHowTo() {
   });
 
   // For div3
-  const img = create("img");
+  const img = create(
+    "img",
+    "z-10 cursor-pointer transition-all duration-300 hover:scale-[0.975] hover:rounded-lg",
+  );
   img.src = "./assets/images/Brands-Green.jpg";
 
   // For div4
@@ -63,7 +72,7 @@ export function sectionHowTo() {
   const p3 = create("p", "text-bg");
   p3.textContent = "Brewing Time: 2-3 min.";
 
-  set([h4, h5], div1);
+  set([h3, h5], div1);
   set([dropdown], div2);
   set(img, div3);
   set([h2_2, p1, p2, p3], div4);

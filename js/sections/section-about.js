@@ -2,12 +2,12 @@ import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
 export function sectionAbout() {
-  const section = create("section", "bg-bg");
+  const section = create("section", "bg-bg md:pt-2");
 
   const h2 = create("h2", "mb-4 ml-4 text-brown");
   h2.textContent = "About Us";
 
-  const grid = create("div", "grid gap-2 md:grid-cols-2");
+  const grid = create("div", "grid gap-2 md:grid-cols-2 md:overflow-hidden");
   const imgSrcs = [
     "./assets/images/About-us-1.jpg",
     "./assets/images/About-us-2.jpg",
@@ -21,11 +21,17 @@ export function sectionAbout() {
     "Company information and Mission",
     "About the Sippers and Dippers",
   ];
+  const origins = [
+    "md:origin-top-left",
+    "md:origin-top-right",
+    "md:origin-bottom-left",
+    "md:origin-bottom-right",
+  ];
 
   for (let i = 0; i < imgSrcs.length; i++) {
     const div = create(
       "div",
-      "group relative cursor-pointer transition-transform duration-300 hover:z-10 hover:scale-105",
+      `group relative cursor-pointer transition-transform duration-300 hover:z-10 hover:scale-[1.0125] ${origins[i]}`,
     );
     const img = create("img");
     img.src = imgSrcs[i];

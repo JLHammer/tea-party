@@ -7,7 +7,7 @@ import { sectionBrands } from "./sections/section-brands.js";
 import { sectionHowTo } from "./sections/section-how-to.js";
 
 export function main() {
-  const main = create("main", "min-h-screen bg-bg-green text-text");
+  const main = create("main", "min-h-screen bg-bg-green text-text md:px-[6%]");
   set([sectionHero(), sectionAbout(), sectionBrands(), sectionHowTo()], main);
   return main;
 }

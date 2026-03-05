@@ -2,10 +2,13 @@ import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
 export function sectionHero() {
-  const section = create("section", "bg-bg p-4 md:flex-row");
+  const section = create("section", "gap-4 bg-bg p-4 md:flex-row md:py-12");
   // Div 1 in section
   const div1 = create("div", "w-full");
-  const h2 = create("h2", "mb-4 text-center text-primary");
+  const h2 = create(
+    "h2",
+    "mx-auto mb-4 origin-center text-center text-primary md:mx-0 md:origin-left",
+  );
   h2.textContent = "Passion and pride";
   const p1 = create("p", "mb-6");
   const p2 = create("p");
@@ -15,8 +18,14 @@ export function sectionHero() {
     "Since 1990 our knowledge and experience has been geared to the quality of our products, which we treat with respect and meticulousness.";
 
   // Div 2 in section
-  const div2 = create("div", "flex w-full flex-col items-center");
-  const img = create("img");
+  const div2 = create(
+    "div",
+    "flex w-full flex-col items-center md:h-auto md:w-full md:justify-center",
+  );
+  const img = create(
+    "img",
+    "p-20 transition-transform duration-300 hover:scale-105 md:p-4",
+  );
   img.src = "./favicon.png";
 
   set([h2, p1, p2], div1);
