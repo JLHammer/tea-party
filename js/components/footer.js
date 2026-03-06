@@ -4,10 +4,11 @@ import { set } from "../utils/set.js";
 import { form } from "../components/form.js";
 
 export function footer() {
-  const section = create(
+  const footer = create(
     "footer",
     "bg-secondary p-4 text-bg md:px-14 md:pt-8 md:pb-16",
   );
+  footer.id = "join-us";
 
   const h2 = create("h2", "mb-4 origin-left text-primary");
   h2.textContent = "Contact Us";
@@ -60,6 +61,6 @@ export function footer() {
   set([h5_3, policy, contact], div3);
   set([div1, div2, div3], address);
   set([address, form()], flex);
-  set([h2, flex], section);
-  return section;
+  set([h2, flex], footer);
+  return footer;
 }

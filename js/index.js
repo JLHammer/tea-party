@@ -7,6 +7,9 @@ import { footer } from "./components/footer.js";
 
 console.log("index.js loaded!");
 
+const html = document.documentElement;
+html.classList.add("scroll-smooth");
+
 const root = get("#root");
 set(header(), root);
 set(main(), root);

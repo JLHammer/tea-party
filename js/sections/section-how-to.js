@@ -3,6 +3,7 @@ import { set } from "../utils/set.js";
 
 export function sectionHowTo() {
   const section = create("section", "bg-bg md:pb-3");
+  section.id = "how-to";
 
   const h2_1 = create("h2", "mb-4 ml-4 text-accent");
   h2_1.textContent = "How to prepare tea";
@@ -51,6 +52,66 @@ export function sectionHowTo() {
     set(optionElement, dropdown);
   });
 
+  // Tea data map
+  const teaData = {
+    "Choose Brand": {
+      image: "./assets/images/Brands-Green.jpg",
+      title: "Green Tea",
+      description:
+        "Choose your brand and learn how to prepare. Fresh and vegetal, green teas are plucked, withered and rolled. Heat is applied to stop oxidation.",
+      temperature: "Water Temperature: 80°C / 180°F",
+      brewingTime: "Brewing Time: 2-3 min.",
+    },
+    "Green Tea": {
+      image: "./assets/images/Brands-Green.jpg",
+      title: "Green Tea",
+      description:
+        "Fresh and vegetal, green teas are plucked, withered and rolled. Heat is applied to stop oxidation, preserving the natural antioxidants.",
+      temperature: "Water Temperature: 80°C / 180°F",
+      brewingTime: "Brewing Time: 2-3 min.",
+    },
+    "Black Tea": {
+      image: "./assets/images/Brands-Black.jpg",
+      title: "Black Tea",
+      description:
+        "Bold and full-bodied, black teas are fully oxidized after rolling. This process gives them their characteristic dark colour and rich, robust flavour.",
+      temperature: "Water Temperature: 100°C / 212°F",
+      brewingTime: "Brewing Time: 3-5 min.",
+    },
+    "White Tea": {
+      image: "./assets/images/Brands-White.jpg",
+      title: "White Tea",
+      description:
+        "Delicate and subtly sweet, white tea is the least processed of all teas. Made from young leaves and buds, it retains a gentle floral character.",
+      temperature: "Water Temperature: 75°C / 167°F",
+      brewingTime: "Brewing Time: 2-4 min.",
+    },
+    "Rooibos Tea": {
+      image: "./assets/images/Brands-Rooibos.jpg",
+      title: "Rooibos Tea",
+      description:
+        "Naturally caffeine-free and rich in antioxidants, rooibos comes from South Africa. It has a naturally sweet, earthy flavour with a beautiful red colour.",
+      temperature: "Water Temperature: 100°C / 212°F",
+      brewingTime: "Brewing Time: 5-7 min.",
+    },
+    "Herbal Tea": {
+      image: "./assets/images/Brands-Herbal.jpg",
+      title: "Herbal Tea",
+      description:
+        "A caffeine-free blend of herbs, flowers and spices. Each herbal infusion offers its own unique flavour and wellness benefits, from calming chamomile to refreshing peppermint.",
+      temperature: "Water Temperature: 100°C / 212°F",
+      brewingTime: "Brewing Time: 5-7 min.",
+    },
+    "Organic Tea": {
+      image: "./assets/images/Brands-Organic.jpg",
+      title: "Organic Tea",
+      description:
+        "Grown without synthetic pesticides or fertilisers, organic teas offer a pure and natural taste. A mindful choice for both your health and the environment.",
+      temperature: "Water Temperature: 85°C / 185°F",
+      brewingTime: "Brewing Time: 3-4 min.",
+    },
+  };
+
   // For div3
   const img = create(
     "img",
@@ -71,6 +132,18 @@ export function sectionHowTo() {
 
   const p3 = create("p", "text-bg");
   p3.textContent = "Brewing Time: 2-3 min.";
+
+  // Dropdown change handler
+  dropdown.addEventListener("change", () => {
+    const selected = dropdown.value;
+    const data = teaData[selected] ?? teaData["Green Tea"];
+
+    img.src = data.image;
+    h2_2.textContent = data.title;
+    p1.textContent = data.description;
+    p2.textContent = data.temperature;
+    p3.textContent = data.brewingTime;
+  });
 
   set([h3, h5], div1);
   set([dropdown], div2);

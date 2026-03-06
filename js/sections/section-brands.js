@@ -3,6 +3,7 @@ import { set } from "../utils/set.js";
 
 export function sectionBrands() {
   const section = create("section", "bg-bg");
+  section.id = "brands";
 
   const h2 = create("h2", "mb-4 ml-4 text-primary");
   h2.textContent = "Our Brands";

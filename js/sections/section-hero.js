@@ -3,6 +3,8 @@ import { set } from "../utils/set.js";
 
 export function sectionHero() {
   const section = create("section", "gap-4 bg-bg p-4 md:flex-row md:py-12");
+  section.id = "hero";
+
   // Div 1 in section
   const div1 = create("div", "w-full");
   const h2 = create(
