@@ -6,11 +6,12 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
-    "tailwindcss": "^4.2.1",
-    "vite": "^6.0.0"
+    "tailwindcss": "^4.2.1"
+
   },
   "devDependencies": {
     "prettier": "^3.8.1",
-    "prettier-plugin-tailwindcss": "^0.7.2"
+    "prettier-plugin-tailwindcss": "^0.7.2",
+        "vite": "^6.0.0"
   }
 }
