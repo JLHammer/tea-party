@@ -1,3 +1,10 @@
+import brandsGreen from "../../assets/images/Brands-Green.jpg";
+import brandsBlack from "../../assets/images/Brands-Black.jpg";
+import brandsWhite from "../../assets/images/Brands-White.jpg";
+import brandsRooibos from "../../assets/images/Brands-Rooibos.jpg";
+import brandsHerbal from "../../assets/images/Brands-Herbal.jpg";
+import brandsOrganic from "../../assets/images/Brands-Organic.jpg";
+
 import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
@@ -55,7 +62,7 @@ export function sectionHowTo() {
   // Tea data map
   const teaData = {
     "Choose Brand": {
-      image: "./assets/images/Brands-Green.jpg",
+      image: brandsGreen,
       title: "Green Tea",
       description:
         "Choose your brand and learn how to prepare. Fresh and vegetal, green teas are plucked, withered and rolled. Heat is applied to stop oxidation.",
@@ -63,7 +70,7 @@ export function sectionHowTo() {
       brewingTime: "Brewing Time: 2-3 min.",
     },
     "Green Tea": {
-      image: "./assets/images/Brands-Green.jpg",
+      image: brandsGreen,
       title: "Green Tea",
       description:
         "Fresh and vegetal, green teas are plucked, withered and rolled. Heat is applied to stop oxidation, preserving the natural antioxidants.",
@@ -71,7 +78,7 @@ export function sectionHowTo() {
       brewingTime: "Brewing Time: 2-3 min.",
     },
     "Black Tea": {
-      image: "./assets/images/Brands-Black.jpg",
+      image: brandsBlack,
       title: "Black Tea",
       description:
         "Bold and full-bodied, black teas are fully oxidized after rolling. This process gives them their characteristic dark colour and rich, robust flavour.",
@@ -79,7 +86,7 @@ export function sectionHowTo() {
       brewingTime: "Brewing Time: 3-5 min.",
     },
     "White Tea": {
-      image: "./assets/images/Brands-White.jpg",
+      image: brandsWhite,
       title: "White Tea",
       description:
         "Delicate and subtly sweet, white tea is the least processed of all teas. Made from young leaves and buds, it retains a gentle floral character.",
@@ -87,7 +94,7 @@ export function sectionHowTo() {
       brewingTime: "Brewing Time: 2-4 min.",
     },
     "Rooibos Tea": {
-      image: "./assets/images/Brands-Rooibos.jpg",
+      image: brandsRooibos,
       title: "Rooibos Tea",
       description:
         "Naturally caffeine-free and rich in antioxidants, rooibos comes from South Africa. It has a naturally sweet, earthy flavour with a beautiful red colour.",
@@ -95,7 +102,7 @@ export function sectionHowTo() {
       brewingTime: "Brewing Time: 5-7 min.",
     },
     "Herbal Tea": {
-      image: "./assets/images/Brands-Herbal.jpg",
+      image: brandsHerbal,
       title: "Herbal Tea",
       description:
         "A caffeine-free blend of herbs, flowers and spices. Each herbal infusion offers its own unique flavour and wellness benefits, from calming chamomile to refreshing peppermint.",
@@ -103,7 +110,7 @@ export function sectionHowTo() {
       brewingTime: "Brewing Time: 5-7 min.",
     },
     "Organic Tea": {
-      image: "./assets/images/Brands-Organic.jpg",
+      image: brandsOrganic,
       title: "Organic Tea",
       description:
         "Grown without synthetic pesticides or fertilisers, organic teas offer a pure and natural taste. A mindful choice for both your health and the environment.",
@@ -117,7 +124,7 @@ export function sectionHowTo() {
     "img",
     "z-10 cursor-pointer transition-all duration-300 hover:scale-[0.975] hover:rounded-lg",
   );
-  img.src = "./assets/images/Brands-Green.jpg";
+  img.src = brandsGreen;
 
   // For div4
   const h2_2 = create("h2", "font-roboto font-normal text-brown");

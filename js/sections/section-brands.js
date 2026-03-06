@@ -1,3 +1,10 @@
+import brandsGreen from "../../assets/images/Brands-Green.jpg";
+import brandsBlack from "../../assets/images/Brands-Black.jpg";
+import brandsWhite from "../../assets/images/Brands-White.jpg";
+import brandsRooibos from "../../assets/images/Brands-Rooibos.jpg";
+import brandsHerbal from "../../assets/images/Brands-Herbal.jpg";
+import brandsOrganic from "../../assets/images/Brands-Organic.jpg";
+
 import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
@@ -10,12 +17,12 @@ export function sectionBrands() {
 
   const grid = create("div", "grid grid-cols-2 gap-2 md:grid-cols-3");
   const imgSrcs = [
-    "./assets/images/Brands-Green.jpg",
-    "./assets/images/Brands-Black.jpg",
-    "./assets/images/Brands-White.jpg",
-    "./assets/images/Brands-Rooibos.jpg",
-    "./assets/images/Brands-Herbal.jpg",
-    "./assets/images/Brands-Organic.jpg",
+    brandsGreen,
+    brandsBlack,
+    brandsWhite,
+    brandsRooibos,
+    brandsHerbal,
+    brandsOrganic,
   ];
 
   imgSrcs.forEach((src) => {

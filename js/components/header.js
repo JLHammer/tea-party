@@ -1,3 +1,5 @@
+import headerImage from "../../assets/images/Image-Hero-Front.jpg";
+
 import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
@@ -7,7 +9,7 @@ export function header() {
   const header = create("header");
   const heroDiv = create("div", "relative flex flex-col items-center");
   const headerImg = create("img", "w-full");
-  headerImg.src = "./assets/images/Image-Hero-Front.jpg";
+  headerImg.src = headerImage;
   const heading = create("h1", "absolute top-[5%] select-none");
   heading.textContent = "Tea Party";
   set([headerImg, heading], heroDiv);

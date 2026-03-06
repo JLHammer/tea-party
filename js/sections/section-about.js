@@ -1,3 +1,8 @@
+import aboutImg1 from "../../assets/images/About-us-1.jpg";
+import aboutImg2 from "../../assets/images/About-us-2.jpg";
+import aboutImg3 from "../../assets/images/About-us-3.jpg";
+import aboutImg4 from "../../assets/images/About-us-4.jpg";
+
 import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
@@ -9,12 +14,7 @@ export function sectionAbout() {
   h2.textContent = "About Us";
 
   const grid = create("div", "grid gap-2 md:grid-cols-2 md:overflow-hidden");
-  const imgSrcs = [
-    "./assets/images/About-us-1.jpg",
-    "./assets/images/About-us-2.jpg",
-    "./assets/images/About-us-3.jpg",
-    "./assets/images/About-us-4.jpg",
-  ];
+  const imgSrcs = [aboutImg1, aboutImg2, aboutImg3, aboutImg4];
   const h3s = ["The Team", "The Brand", "The Company", "The Customers"];
   const h4s = [
     "Meet our dedicated team",

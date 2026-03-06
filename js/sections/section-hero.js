@@ -1,3 +1,5 @@
+import heroImage from "../../favicon.png";
+
 import { create } from "../utils/create.js";
 import { set } from "../utils/set.js";
 
@@ -28,7 +30,7 @@ export function sectionHero() {
     "img",
     "p-20 transition-transform duration-300 hover:scale-105 md:p-4",
   );
-  img.src = "./favicon.png";
+  img.src = heroImage;
 
   set([h2, p1, p2], div1);
   set(img, div2);
