@@ -28,7 +28,7 @@ export function sectionHero() {
   );
   const img = create(
     "img",
-    "p-20 transition-transform duration-300 hover:scale-105 md:p-4",
+    "p-10 transition-transform duration-300 hover:scale-105 md:p-2",
   );
   img.src = heroImage;
 
